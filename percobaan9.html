@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Personal Website</title>
+      <link rel="stylesheet" type="text/css" href="portfolio.css"/>
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+   </head>
+   <body>
+      <section id="home">
+         <nav>
+            <a href="#" class="logo">Portfolio Tutorial</a>
+            <ul>
+               <li><a href="#home" class="active">Home</a></li>
+               <li><a href="#about">Tentang Saya</a></li>
+               <li><a href="#kemampuan">Kemampuan</a></li>
+               <li><a href="#kontak">Kontak Saya</a></li>
+            </ul>
+         </nav>
+         <div class="text-container">
+            <p>Hello,</p>
+            <p>I&#8217;M Wardana</p>
+            <p>I&#8217;M <span id="typed"></span></p>
+            <p>Saya adalah pecinta alam, hobi bermain bulutangkis serta
+               <br>baca buku.
+            </p>
+            <form method="get" action="MyResume.zip">
+               <button class="hire-btn">Hire me</button>
+               <button class="down-cv" type="submit">Download CV</button>
+            </form>
+         </div>
+         <img alt="model" data-aos="flip-right" data-aos-duration="3000" class="model" src="photos2.png">  
+      </section>
+      <section class="about" id="about">
+         <div class="about-text">
+            <p>Tentang Saya</p>
+         </div>
+         <img alt="model" id="model2" class="model2 animate__animated" src="profile.png">  
+         <div class="text-container2">
+            <table width="400px" height="200" data-aos="zoom-in-up">
+               <tr>
+                  <td colspan="2">Tentang Saya</td>
+               </tr>
+               <tr>
+                  <th>Nama : </th>
+                  <td>Muhammad Wardana</td>
+               </tr>
+               <tr>
+                  <th>NIM : </th>
+                  <td>20140140029</td>
+               </tr>
+               <tr>
+                  <th>Asal : </th>
+                  <td>Kota Samarinda</td>
+               </tr>
+               <tr>
+                  <th>Email : </th>
+                  <td>muhammadwardana2014@gmail.com</td>
+               </tr>
+               <tr>
+                  <th>Pekerjaan : </th>
+                  <td>Pengajar</td>
+               </tr>
+            </table>
+         </div>
+      </section>
+      <div class="services" id="kemampuan">
+         <div class="services-text ">
+            <p>Kemampuan</p>
+            <p>Saya adalah pribadi yang berorientasi detail dengan pengalaman selama +- 3 tahun sebagai web developer. Terampil dalam mengoperasikan berbagai platform, memiliki kemampuan komunikasi lisan dan verbal yang baik, dan sanggup belajar hal-hal baru jika dibutuhkan.</p>
+         </div>
+         <div class="box-container">
+            <div data-aos="fade-right"
+               data-aos-offset="300"
+               data-aos-easing="ease-in-sine" class="box-1">
+               <span>1</span>
+               <p class="heading" style="color: #000000;">PHP Native & Framework</p>
+               <p class="details">
+                  <img src="php.png" width="150" height="100" />
+               </p>
+               <button id="box1">Read More</button>
+            </div>
+            <div data-aos="fade-down"
+               data-aos-easing="linear"
+               data-aos-duration="1500" class="box-2">
+               <span>2</span>
+               <p class="heading" style="color: #000000;">Flutter</p>
+               <p class="details"><img src="flutter.png" width="150" height="100" /></p>
+               <button id="box2">Read More</button>
+            </div>
+            <div data-aos="fade-left"
+               data-aos-offset="300"
+               data-aos-easing="ease-in-sine" class="box-3">
+               <span>3</span>
+               <p class="heading" style="color: #000000;">Javascript</p>
+               <p class="details"><img src="js.png" width="150" height="100" /></p>
+
+<button id="box3">Read More</button>
+            </div>
+         </div>
+      </div>
+      <footer id="kontak">
+         <p>Kontak Saya</p>
+         <a href="https://wa.me/6282325661600" target="_blank" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> Whatsapp saya</a>
+         <p class="copyright">Copyright &copy; by Muhammad Wardana</p>
+      </footer>
+      <div class="social">
+         <a href="mailto:muhammadwardana2014@gmail.com" target="_blank" class="gmail"><i class="fab fa-google"></i></a>
+         <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+         <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+         <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+         <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
+      </div>
+      <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script> 
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+      <script>
+         $(document).ready(function(){
+          new Typed('#typed',{
+              strings : ['Web Developer','BackEnd Developer','Lecturer'],
+              typeSpeed : 70,
+              delaySpeed : 50,
+              loop : true
+          });
+         
+          AOS.init();
+         
+          $(document).on('click', '#box1', function(event){  
+              Swal.fire({
+                  title: '<strong>PHP Native & Framework</strong>',
+                  html:
+                      '- Saya berpengalaman membuat Rest API <br/>' +
+                      '- Saya Juga mengerti dalam konsep server side & client side <br/> ' +
+                      '- Saya Juga mampu dalam membuat website responsive',
+                  showCloseButton: true,
+                  showCancelButton: true,
+                  focusConfirm: false,
+              })
+          });
+         
+          $(document).on('click', '#box2', function(event){  
+              Swal.fire({
+                  title: '<strong>Flutter</strong>',
+                  html:
+                      '- Saya berpengalaman get Rest API <br/>' +
+                      '- Saya Juga mampu membuat aplikasi dari basic sampai advance UI <br/> ' +
+                      '- Saya Juga mampu dalam mengimplementasikan widget dari basic sampai advance',
+                  showCloseButton: true,
+                  showCancelButton: true,
+                  focusConfirm: false,
+              })
+          });
+         
+          $(document).on('click', '#box3', function(event){  
+              Swal.fire({
+                  title: '<strong>Javascript</strong>',
+                  html:
+                      '- Saya memahami konsep arrow function<br/>' +
+                      '- Saya berpengalaman get API dengan fetch API <br/> ' +
+                      '- Saya juga mampu memahami konsep Asynchronous',
+                  showCloseButton: true,
+                  showCancelButton: true,
+                  focusConfirm: false,
+              })
+          });
+         
+          $('#model2').mousemove(function(event){
+              $(this).addClass('animate__heartBeat');
+              setTimeout(function () { 
+                  $('#model2').removeClass('animate__heartBeat');
+              }, 2000);
+          });
+         });
+      </script>
+   </body>
+</html>
